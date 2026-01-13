@@ -52,8 +52,6 @@ mvp-futbol/
 ├── index.php
 ├── equipos.json
 ├── resultados.json
-├── img/
-│ └── portada.jpg (opcional)
 └── README.md
 
 ---
