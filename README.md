@@ -77,13 +77,11 @@ mvp-futbol/
 3. Asegurar permisos de escritura en: resultados.json → 666
 4. Acceder desde el dominio asignado
 
----
 
 ## 📝 Configuración de equipos
 
 Los equipos se definen en el archivo `equipos.json`:
 
-```json
 [
 { "id": 1, "nombre": "Equipo #1" },
 { "id": 2, "nombre": "Equipo #2" },
