@@ -92,13 +92,17 @@ Los equipos se definen en el archivo `equipos.json`:
 
 Luego de modificar este archivo, es necesario volver a generar el fixture.
 
-⚠️ Consideraciones
+---
+
+## ⚠️ Consideraciones
 
 Los datos se guardan en archivos JSON compartidos
 Si dos usuarios guardan al mismo tiempo, el último guardado sobrescribe
 Ideal para eventos y torneos pequeños
 Para uso intensivo se recomienda migrar a MySQL
 
-👩‍💻 Autora
+---
+
+## 👩‍💻 Autora
 
 Proyecto desarrollado por LLP como aplicación web práctica para la gestión de eventos deportivos
