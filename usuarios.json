@@ -1,0 +1,10 @@
+{
+  "admin": {
+    "password": "copasay123",
+    "role": "admin"
+  },
+  "jugadores": {
+    "password": "jugadores123",
+    "role": "viewer"
+  }
+}
