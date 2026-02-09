@@ -1,0 +1,1658 @@
+=== INICIO GUARDADO ===
+POST recibido: Array
+(
+    [action] => guardar_resultados
+    [home_goals] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+        )
+
+    [away_goals] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+        )
+
+    [home_yellow] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+        )
+
+    [away_yellow] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+        )
+
+    [home_red] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+        )
+
+    [away_red] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+        )
+
+    [home_possession] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+        )
+
+    [away_possession] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+        )
+
+    [walkover_winner] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+        )
+
+    [status] => Array
+        (
+            [1] => jugado
+            [3] => pendiente
+        )
+
+    [notes] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+        )
+
+)
+
+Procesando partido ID: 1
+Nuevo estado para 1: jugado
+Goles 1:  - 
+Procesando partido ID: 2
+Nuevo estado para 2: pendiente
+Procesando partido ID: 3
+Nuevo estado para 3: pendiente
+=== FIN GUARDADO ===
+
+=== INICIO GUARDADO ===
+POST recibido: Array
+(
+    [action] => guardar_resultados
+    [home_goals] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+        )
+
+    [away_goals] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+        )
+
+    [home_yellow] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+        )
+
+    [away_yellow] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+        )
+
+    [home_red] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+        )
+
+    [away_red] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+        )
+
+    [home_possession] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+        )
+
+    [away_possession] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+        )
+
+    [walkover_winner] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+        )
+
+    [notes] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+        )
+
+    [status] => Array
+        (
+            [2] => jugado
+            [3] => pendiente
+        )
+
+)
+
+Procesando partido ID: 1
+Nuevo estado para 1: pendiente
+Procesando partido ID: 2
+Nuevo estado para 2: jugado
+Goles 2:  - 
+Procesando partido ID: 3
+Nuevo estado para 3: pendiente
+=== FIN GUARDADO ===
+
+=== INICIO GUARDADO ===
+POST recibido: Array
+(
+    [action] => guardar_resultados
+    [home_goals] => Array
+        (
+            [1] => 1
+            [2] => 
+            [3] => 
+        )
+
+    [away_goals] => Array
+        (
+            [1] => 1
+            [2] => 
+            [3] => 
+        )
+
+    [home_yellow] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+        )
+
+    [away_yellow] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+        )
+
+    [home_red] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+        )
+
+    [away_red] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+        )
+
+    [home_possession] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+        )
+
+    [away_possession] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+        )
+
+    [walkover_winner] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+        )
+
+    [status] => Array
+        (
+            [1] => jugado
+            [3] => pendiente
+        )
+
+    [notes] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+        )
+
+)
+
+Procesando partido ID: 1
+Nuevo estado para 1: jugado
+Goles 1: 1 - 1
+Procesando partido ID: 2
+Nuevo estado para 2: pendiente
+Procesando partido ID: 3
+Nuevo estado para 3: pendiente
+=== FIN GUARDADO ===
+
+=== INICIO GUARDADO ===
+POST recibido: Array
+(
+    [action] => guardar_resultados
+    [home_goals] => Array
+        (
+            [1] => 1
+            [2] => 1
+            [3] => 0
+        )
+
+    [away_goals] => Array
+        (
+            [1] => 1
+            [2] => 1
+            [3] => 0
+        )
+
+    [home_yellow] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+        )
+
+    [away_yellow] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+        )
+
+    [home_red] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+        )
+
+    [away_red] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+        )
+
+    [walkover_winner] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+        )
+
+    [status] => Array
+        (
+            [1] => jugado
+            [2] => jugado
+            [3] => walkover
+        )
+
+    [notes] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+        )
+
+)
+
+Procesando partido ID: 1
+Nuevo estado para 1: jugado
+Goles 1: 1 - 1
+Procesando partido ID: 2
+Nuevo estado para 2: jugado
+Goles 2: 1 - 1
+Procesando partido ID: 3
+Nuevo estado para 3: walkover
+=== FIN GUARDADO ===
+
+=== INICIO GUARDADO ===
+POST recibido: Array
+(
+    [action] => guardar_resultados
+    [home_goals] => Array
+        (
+            [1] => 1
+            [2] => 1
+            [3] => 
+        )
+
+    [away_goals] => Array
+        (
+            [1] => 1
+            [2] => 1
+            [3] => 
+        )
+
+    [home_yellow] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+        )
+
+    [away_yellow] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+        )
+
+    [home_red] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+        )
+
+    [away_red] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+        )
+
+    [walkover_winner] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 6
+        )
+
+    [notes] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+        )
+
+)
+
+Procesando partido ID: 1
+Nuevo estado para 1: pendiente
+Procesando partido ID: 2
+Nuevo estado para 2: pendiente
+Procesando partido ID: 3
+Nuevo estado para 3: pendiente
+=== FIN GUARDADO ===
+
+=== INICIO GUARDADO ===
+POST recibido: Array
+(
+    [action] => guardar_resultados
+    [home_goals] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+        )
+
+    [away_goals] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+        )
+
+    [home_yellow] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+        )
+
+    [away_yellow] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+        )
+
+    [home_red] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+        )
+
+    [away_red] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+        )
+
+    [walkover_winner] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+        )
+
+    [status] => Array
+        (
+            [1] => jugado
+            [2] => jugado
+            [3] => jugado
+        )
+
+    [notes] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+        )
+
+)
+
+Procesando partido ID: 1
+Nuevo estado para 1: jugado
+Goles 1:  - 
+Procesando partido ID: 2
+Nuevo estado para 2: jugado
+Goles 2:  - 
+Procesando partido ID: 3
+Nuevo estado para 3: jugado
+Goles 3:  - 
+=== FIN GUARDADO ===
+
+=== INICIO GUARDADO ===
+POST recibido: Array
+(
+    [action] => guardar_resultados
+    [home_goals] => Array
+        (
+            [1] => 2
+            [2] => 
+            [3] => 
+        )
+
+    [away_goals] => Array
+        (
+            [1] => 1
+            [2] => 
+            [3] => 
+        )
+
+    [home_yellow] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+        )
+
+    [away_yellow] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+        )
+
+    [home_red] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+        )
+
+    [away_red] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+        )
+
+    [home_possession] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+        )
+
+    [away_possession] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+        )
+
+    [walkover_winner] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+        )
+
+    [status] => Array
+        (
+            [1] => jugado
+            [2] => pendiente
+            [3] => pendiente
+        )
+
+    [notes] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+        )
+
+)
+
+Procesando partido ID: 1
+Nuevo estado para 1: jugado
+Goles 1: 2 - 1
+Procesando partido ID: 2
+Nuevo estado para 2: pendiente
+Procesando partido ID: 3
+Nuevo estado para 3: pendiente
+=== FIN GUARDADO ===
+
+=== INICIO GUARDADO ===
+POST recibido: Array
+(
+    [action] => guardar_resultados
+    [home_goals] => Array
+        (
+            [1] => 2
+            [2] => 12
+            [3] => 
+        )
+
+    [away_goals] => Array
+        (
+            [1] => 1
+            [2] => 1
+            [3] => 
+        )
+
+    [home_yellow] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+        )
+
+    [away_yellow] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+        )
+
+    [home_red] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+        )
+
+    [away_red] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+        )
+
+    [home_possession] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+        )
+
+    [away_possession] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+        )
+
+    [walkover_winner] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+        )
+
+    [notes] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+        )
+
+    [status] => Array
+        (
+            [2] => jugado
+            [3] => pendiente
+        )
+
+)
+
+Procesando partido ID: 1
+Nuevo estado para 1: pendiente
+Procesando partido ID: 2
+Nuevo estado para 2: jugado
+Goles 2: 12 - 1
+Procesando partido ID: 3
+Nuevo estado para 3: pendiente
+=== FIN GUARDADO ===
+
+=== INICIO GUARDADO ===
+POST recibido: Array
+(
+    [action] => guardar_resultados
+    [home_goals] => Array
+        (
+            [1] => 1
+            [2] => 
+            [3] => 
+            [4] => 
+            [5] => 
+            [6] => 
+            [7] => 
+            [8] => 
+            [9] => 
+            [10] => 
+            [11] => 
+            [12] => 
+        )
+
+    [away_goals] => Array
+        (
+            [1] => 2
+            [2] => 
+            [3] => 
+            [4] => 
+            [5] => 
+            [6] => 
+            [7] => 
+            [8] => 
+            [9] => 
+            [10] => 
+            [11] => 
+            [12] => 
+        )
+
+    [home_yellow] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+            [4] => 
+            [5] => 
+            [6] => 
+            [7] => 
+            [8] => 
+            [9] => 
+            [10] => 
+            [11] => 
+            [12] => 
+        )
+
+    [away_yellow] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+            [4] => 
+            [5] => 
+            [6] => 
+            [7] => 
+            [8] => 
+            [9] => 
+            [10] => 
+            [11] => 
+            [12] => 
+        )
+
+    [home_red] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+            [4] => 
+            [5] => 
+            [6] => 
+            [7] => 
+            [8] => 
+            [9] => 
+            [10] => 
+            [11] => 
+            [12] => 
+        )
+
+    [away_red] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+            [4] => 
+            [5] => 
+            [6] => 
+            [7] => 
+            [8] => 
+            [9] => 
+            [10] => 
+            [11] => 
+            [12] => 
+        )
+
+    [walkover_winner] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+            [4] => 
+            [5] => 
+            [6] => 
+            [7] => 
+            [8] => 
+            [9] => 
+            [10] => 
+            [11] => 
+            [12] => 
+        )
+
+    [status] => Array
+        (
+            [1] => pendiente
+            [2] => pendiente
+            [3] => pendiente
+            [4] => pendiente
+            [5] => pendiente
+            [6] => pendiente
+            [7] => pendiente
+            [8] => pendiente
+            [9] => pendiente
+            [10] => pendiente
+            [11] => pendiente
+            [12] => pendiente
+        )
+
+    [notes] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+            [4] => 
+            [5] => 
+            [6] => 
+            [7] => 
+            [8] => 
+            [9] => 
+            [10] => 
+            [11] => 
+            [12] => 
+        )
+
+)
+
+Procesando partido ID: 1
+Nuevo estado para 1: pendiente
+Procesando partido ID: 2
+Nuevo estado para 2: pendiente
+Procesando partido ID: 3
+Nuevo estado para 3: pendiente
+Procesando partido ID: 4
+Nuevo estado para 4: pendiente
+Procesando partido ID: 5
+Nuevo estado para 5: pendiente
+Procesando partido ID: 6
+Nuevo estado para 6: pendiente
+Procesando partido ID: 7
+Nuevo estado para 7: pendiente
+Procesando partido ID: 8
+Nuevo estado para 8: pendiente
+Procesando partido ID: 9
+Nuevo estado para 9: pendiente
+Procesando partido ID: 10
+Nuevo estado para 10: pendiente
+Procesando partido ID: 11
+Nuevo estado para 11: pendiente
+Procesando partido ID: 12
+Nuevo estado para 12: pendiente
+=== FIN GUARDADO ===
+
+=== INICIO GUARDADO ===
+POST recibido: Array
+(
+    [action] => guardar_resultados
+    [home_goals] => Array
+        (
+            [1] => 1
+            [2] => 
+            [3] => 
+            [4] => 
+            [5] => 
+            [6] => 
+            [7] => 
+            [8] => 
+            [9] => 
+            [10] => 
+            [11] => 
+            [12] => 
+        )
+
+    [away_goals] => Array
+        (
+            [1] => 1
+            [2] => 
+            [3] => 
+            [4] => 
+            [5] => 
+            [6] => 
+            [7] => 
+            [8] => 
+            [9] => 
+            [10] => 
+            [11] => 
+            [12] => 
+        )
+
+    [home_yellow] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+            [4] => 0
+            [5] => 0
+            [6] => 0
+            [7] => 0
+            [8] => 0
+            [9] => 0
+            [10] => 0
+            [11] => 0
+            [12] => 0
+        )
+
+    [away_yellow] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+            [4] => 0
+            [5] => 0
+            [6] => 0
+            [7] => 0
+            [8] => 0
+            [9] => 0
+            [10] => 0
+            [11] => 0
+            [12] => 0
+        )
+
+    [home_red] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+            [4] => 0
+            [5] => 0
+            [6] => 0
+            [7] => 0
+            [8] => 0
+            [9] => 0
+            [10] => 0
+            [11] => 0
+            [12] => 0
+        )
+
+    [away_red] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+            [4] => 0
+            [5] => 0
+            [6] => 0
+            [7] => 0
+            [8] => 0
+            [9] => 0
+            [10] => 0
+            [11] => 0
+            [12] => 0
+        )
+
+    [walkover_winner] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+            [4] => 
+            [5] => 
+            [6] => 
+            [7] => 
+            [8] => 
+            [9] => 
+            [10] => 
+            [11] => 
+            [12] => 
+        )
+
+    [status] => Array
+        (
+            [1] => jugado
+            [2] => pendiente
+            [3] => pendiente
+            [4] => pendiente
+            [5] => pendiente
+            [6] => pendiente
+            [7] => pendiente
+            [8] => pendiente
+            [9] => pendiente
+            [10] => pendiente
+            [11] => pendiente
+            [12] => pendiente
+        )
+
+    [notes] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+            [4] => 
+            [5] => 
+            [6] => 
+            [7] => 
+            [8] => 
+            [9] => 
+            [10] => 
+            [11] => 
+            [12] => 
+        )
+
+)
+
+Procesando partido ID: 1
+Nuevo estado para 1: jugado
+Goles 1: 1 - 1
+Procesando partido ID: 2
+Nuevo estado para 2: pendiente
+Procesando partido ID: 3
+Nuevo estado para 3: pendiente
+Procesando partido ID: 4
+Nuevo estado para 4: pendiente
+Procesando partido ID: 5
+Nuevo estado para 5: pendiente
+Procesando partido ID: 6
+Nuevo estado para 6: pendiente
+Procesando partido ID: 7
+Nuevo estado para 7: pendiente
+Procesando partido ID: 8
+Nuevo estado para 8: pendiente
+Procesando partido ID: 9
+Nuevo estado para 9: pendiente
+Procesando partido ID: 10
+Nuevo estado para 10: pendiente
+Procesando partido ID: 11
+Nuevo estado para 11: pendiente
+Procesando partido ID: 12
+Nuevo estado para 12: pendiente
+=== FIN GUARDADO ===
+
+=== INICIO GUARDADO ===
+POST recibido: Array
+(
+    [action] => guardar_resultados
+    [home_goals] => Array
+        (
+            [1] => 1
+            [2] => 2
+            [3] => 
+            [4] => 
+            [5] => 
+            [6] => 
+            [7] => 
+            [8] => 
+            [9] => 
+            [10] => 
+            [11] => 
+            [12] => 
+        )
+
+    [away_goals] => Array
+        (
+            [1] => 1
+            [2] => 2
+            [3] => 
+            [4] => 
+            [5] => 
+            [6] => 
+            [7] => 
+            [8] => 
+            [9] => 
+            [10] => 
+            [11] => 
+            [12] => 
+        )
+
+    [home_yellow] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+            [4] => 0
+            [5] => 0
+            [6] => 0
+            [7] => 0
+            [8] => 0
+            [9] => 0
+            [10] => 0
+            [11] => 0
+            [12] => 0
+        )
+
+    [away_yellow] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+            [4] => 0
+            [5] => 0
+            [6] => 0
+            [7] => 0
+            [8] => 0
+            [9] => 0
+            [10] => 0
+            [11] => 0
+            [12] => 0
+        )
+
+    [home_red] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+            [4] => 0
+            [5] => 0
+            [6] => 0
+            [7] => 0
+            [8] => 0
+            [9] => 0
+            [10] => 0
+            [11] => 0
+            [12] => 0
+        )
+
+    [away_red] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+            [4] => 0
+            [5] => 0
+            [6] => 0
+            [7] => 0
+            [8] => 0
+            [9] => 0
+            [10] => 0
+            [11] => 0
+            [12] => 0
+        )
+
+    [walkover_winner] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+            [4] => 
+            [5] => 
+            [6] => 
+            [7] => 
+            [8] => 
+            [9] => 
+            [10] => 
+            [11] => 
+            [12] => 
+        )
+
+    [notes] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+            [4] => 
+            [5] => 
+            [6] => 
+            [7] => 
+            [8] => 
+            [9] => 
+            [10] => 
+            [11] => 
+            [12] => 
+        )
+
+    [status] => Array
+        (
+            [2] => jugado
+            [3] => pendiente
+            [4] => pendiente
+            [5] => pendiente
+            [6] => pendiente
+            [7] => pendiente
+            [8] => pendiente
+            [9] => pendiente
+            [10] => pendiente
+            [11] => pendiente
+            [12] => pendiente
+        )
+
+)
+
+Procesando partido ID: 1
+Nuevo estado para 1: pendiente
+Procesando partido ID: 2
+Nuevo estado para 2: jugado
+Goles 2: 2 - 2
+Procesando partido ID: 3
+Nuevo estado para 3: pendiente
+Procesando partido ID: 4
+Nuevo estado para 4: pendiente
+Procesando partido ID: 5
+Nuevo estado para 5: pendiente
+Procesando partido ID: 6
+Nuevo estado para 6: pendiente
+Procesando partido ID: 7
+Nuevo estado para 7: pendiente
+Procesando partido ID: 8
+Nuevo estado para 8: pendiente
+Procesando partido ID: 9
+Nuevo estado para 9: pendiente
+Procesando partido ID: 10
+Nuevo estado para 10: pendiente
+Procesando partido ID: 11
+Nuevo estado para 11: pendiente
+Procesando partido ID: 12
+Nuevo estado para 12: pendiente
+=== FIN GUARDADO ===
+
+=== INICIO GUARDADO ===
+POST recibido: Array
+(
+    [action] => guardar_resultados
+    [home_goals] => Array
+        (
+            [1] => 1
+            [2] => 2
+            [3] => 
+            [4] => 
+            [5] => 
+            [6] => 
+            [7] => 
+            [8] => 
+            [9] => 
+            [10] => 
+            [11] => 
+            [12] => 
+        )
+
+    [away_goals] => Array
+        (
+            [1] => 1
+            [2] => 2
+            [3] => 
+            [4] => 
+            [5] => 
+            [6] => 
+            [7] => 
+            [8] => 
+            [9] => 
+            [10] => 
+            [11] => 
+            [12] => 
+        )
+
+    [home_yellow] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+            [4] => 0
+            [5] => 0
+            [6] => 0
+            [7] => 0
+            [8] => 0
+            [9] => 0
+            [10] => 0
+            [11] => 0
+            [12] => 0
+        )
+
+    [away_yellow] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+            [4] => 0
+            [5] => 0
+            [6] => 0
+            [7] => 0
+            [8] => 0
+            [9] => 0
+            [10] => 0
+            [11] => 0
+            [12] => 0
+        )
+
+    [home_red] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+            [4] => 0
+            [5] => 0
+            [6] => 0
+            [7] => 0
+            [8] => 0
+            [9] => 0
+            [10] => 0
+            [11] => 0
+            [12] => 0
+        )
+
+    [away_red] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+            [4] => 0
+            [5] => 0
+            [6] => 0
+            [7] => 0
+            [8] => 0
+            [9] => 0
+            [10] => 0
+            [11] => 0
+            [12] => 0
+        )
+
+    [walkover_winner] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+            [4] => 
+            [5] => 
+            [6] => 
+            [7] => 
+            [8] => 
+            [9] => 
+            [10] => 
+            [11] => 
+            [12] => 
+        )
+
+    [status] => Array
+        (
+            [1] => jugado
+            [3] => pendiente
+            [4] => pendiente
+            [5] => pendiente
+            [6] => pendiente
+            [7] => pendiente
+            [8] => pendiente
+            [9] => pendiente
+            [10] => pendiente
+            [11] => pendiente
+            [12] => pendiente
+        )
+
+    [notes] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+            [4] => 
+            [5] => 
+            [6] => 
+            [7] => 
+            [8] => 
+            [9] => 
+            [10] => 
+            [11] => 
+            [12] => 
+        )
+
+)
+
+Procesando partido ID: 1
+Nuevo estado para 1: jugado
+Goles 1: 1 - 1
+Procesando partido ID: 2
+Nuevo estado para 2: pendiente
+Procesando partido ID: 3
+Nuevo estado para 3: pendiente
+Procesando partido ID: 4
+Nuevo estado para 4: pendiente
+Procesando partido ID: 5
+Nuevo estado para 5: pendiente
+Procesando partido ID: 6
+Nuevo estado para 6: pendiente
+Procesando partido ID: 7
+Nuevo estado para 7: pendiente
+Procesando partido ID: 8
+Nuevo estado para 8: pendiente
+Procesando partido ID: 9
+Nuevo estado para 9: pendiente
+Procesando partido ID: 10
+Nuevo estado para 10: pendiente
+Procesando partido ID: 11
+Nuevo estado para 11: pendiente
+Procesando partido ID: 12
+Nuevo estado para 12: pendiente
+=== FIN GUARDADO ===
+
+=== INICIO GUARDADO ===
+POST recibido: Array
+(
+    [action] => guardar_resultados
+    [home_goals] => Array
+        (
+            [1] => 1
+            [2] => 1
+            [3] => 
+            [4] => 
+            [5] => 
+            [6] => 
+            [7] => 
+            [8] => 
+            [9] => 
+            [10] => 
+            [11] => 
+            [12] => 
+        )
+
+    [away_goals] => Array
+        (
+            [1] => 1
+            [2] => 1
+            [3] => 
+            [4] => 
+            [5] => 
+            [6] => 
+            [7] => 
+            [8] => 
+            [9] => 
+            [10] => 
+            [11] => 
+            [12] => 
+        )
+
+    [home_yellow] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+            [4] => 0
+            [5] => 0
+            [6] => 0
+            [7] => 0
+            [8] => 0
+            [9] => 0
+            [10] => 0
+            [11] => 0
+            [12] => 0
+        )
+
+    [away_yellow] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+            [4] => 0
+            [5] => 0
+            [6] => 0
+            [7] => 0
+            [8] => 0
+            [9] => 0
+            [10] => 0
+            [11] => 0
+            [12] => 0
+        )
+
+    [home_red] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+            [4] => 0
+            [5] => 0
+            [6] => 0
+            [7] => 0
+            [8] => 0
+            [9] => 0
+            [10] => 0
+            [11] => 0
+            [12] => 0
+        )
+
+    [away_red] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+            [4] => 0
+            [5] => 0
+            [6] => 0
+            [7] => 0
+            [8] => 0
+            [9] => 0
+            [10] => 0
+            [11] => 0
+            [12] => 0
+        )
+
+    [walkover_winner] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+            [4] => 
+            [5] => 
+            [6] => 
+            [7] => 
+            [8] => 
+            [9] => 
+            [10] => 
+            [11] => 
+            [12] => 
+        )
+
+    [notes] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+            [4] => 
+            [5] => 
+            [6] => 
+            [7] => 
+            [8] => 
+            [9] => 
+            [10] => 
+            [11] => 
+            [12] => 
+        )
+
+    [status] => Array
+        (
+            [2] => jugado
+            [3] => pendiente
+            [4] => pendiente
+            [5] => pendiente
+            [6] => pendiente
+            [7] => pendiente
+            [8] => pendiente
+            [9] => pendiente
+            [10] => pendiente
+            [11] => pendiente
+            [12] => pendiente
+        )
+
+)
+
+Procesando partido ID: 1
+Nuevo estado para 1: pendiente
+Procesando partido ID: 2
+Nuevo estado para 2: jugado
+Goles 2: 1 - 1
+Procesando partido ID: 3
+Nuevo estado para 3: pendiente
+Procesando partido ID: 4
+Nuevo estado para 4: pendiente
+Procesando partido ID: 5
+Nuevo estado para 5: pendiente
+Procesando partido ID: 6
+Nuevo estado para 6: pendiente
+Procesando partido ID: 7
+Nuevo estado para 7: pendiente
+Procesando partido ID: 8
+Nuevo estado para 8: pendiente
+Procesando partido ID: 9
+Nuevo estado para 9: pendiente
+Procesando partido ID: 10
+Nuevo estado para 10: pendiente
+Procesando partido ID: 11
+Nuevo estado para 11: pendiente
+Procesando partido ID: 12
+Nuevo estado para 12: pendiente
+=== FIN GUARDADO ===
+
+=== INICIO GUARDADO ===
+POST recibido: Array
+(
+    [action] => guardar_resultados
+    [home_goals] => Array
+        (
+            [1] => 1
+            [2] => 1
+            [3] => 1
+            [4] => 1
+        )
+
+    [away_goals] => Array
+        (
+            [1] => 1
+            [2] => 1
+            [3] => 1
+            [4] => 1
+        )
+
+    [home_yellow] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+            [4] => 0
+        )
+
+    [away_yellow] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+            [4] => 0
+        )
+
+    [home_red] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+            [4] => 0
+        )
+
+    [away_red] => Array
+        (
+            [1] => 0
+            [2] => 0
+            [3] => 0
+            [4] => 0
+        )
+
+    [walkover_winner] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+            [4] => 
+        )
+
+    [status] => Array
+        (
+            [1] => jugado
+            [2] => jugado
+            [3] => jugado
+            [4] => jugado
+        )
+
+    [notes] => Array
+        (
+            [1] => 
+            [2] => 
+            [3] => 
+            [4] => 
+        )
+
+)
+
+Procesando partido ID: 1
+Nuevo estado para 1: jugado
+Goles 1: 1 - 1
+Procesando partido ID: 2
+Nuevo estado para 2: jugado
+Goles 2: 1 - 1
+Procesando partido ID: 3
+Nuevo estado para 3: jugado
+Goles 3: 1 - 1
+Procesando partido ID: 4
+Nuevo estado para 4: jugado
+Goles 4: 1 - 1
+=== FIN GUARDADO ===
+

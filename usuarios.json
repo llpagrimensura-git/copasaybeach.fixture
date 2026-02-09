@@ -1,10 +1,14 @@
 {
   "admin": {
-    "password": "copasay123",
+    "password": "admin123",
+    "role": "admin"
+  },
+  "lala": {
+    "password": "Lal@123",
     "role": "admin"
   },
   "jugadores": {
     "password": "jugadores123",
-    "role": "viewer"
+    "role": "user"
   }
 }
