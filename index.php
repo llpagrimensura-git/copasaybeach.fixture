@@ -137,17 +137,18 @@ function calcular_puntos_futbol($match) {
 }
 
 /**
- * HANDBALL - Nuevas reglas
+ * HANDBALL - Nuevas reglas (igual que vóley)
  * - Ganador: 2 puntos
  * - Walkover: 2 puntos ganador, 0 perdedor
- * - No hay empates en handball (se juega hasta desempatar)
+ * - Se juega por sets (2 sets, si empatan hay un 3ero)
+ * - Los puntos de los sets se suman para la diferencia de goles
  */
 function calcular_puntos_handball($match) {
     $resultado = [
         'home_points' => 0,
         'away_points' => 0,
-        'home_gf' => 0,
-        'home_gc' => 0,
+        'home_gf' => 0,  // Puntos totales a favor (suma de puntos de sets)
+        'home_gc' => 0,  // Puntos totales en contra
         'away_gf' => 0,
         'away_gc' => 0
     ];
@@ -163,26 +164,33 @@ function calcular_puntos_handball($match) {
         
         if ($winner_id === $home_id) {
             $resultado['home_points'] = 2;
-            $resultado['home_gf'] = 7;  // Goles por defecto en walkover
-            $resultado['away_gc'] = 7;
+            // No se suman goles en walkover de handball
+            $resultado['home_gf'] = 0;
+            $resultado['away_gc'] = 0;
         } else {
             $resultado['away_points'] = 2;
-            $resultado['away_gf'] = 7;
-            $resultado['home_gc'] = 7;
+            // No se suman goles en walkover de handball
+            $resultado['away_gf'] = 0;
+            $resultado['home_gc'] = 0;
         }
         return $resultado;
     }
 
-    // Partido jugado normalmente
-    $home_goals = (int)$match['home_goals'];
-    $away_goals = (int)$match['away_goals'];
+    // Partido jugado normalmente con sets
+    $home_sets = (int)($match['home_sets_won'] ?? 0);
+    $away_sets = (int)($match['away_sets_won'] ?? 0);
+    
+    // Puntos totales de sets (suma de los puntos de cada set)
+    $home_total_points = (int)($match['home_points'] ?? 0);
+    $away_total_points = (int)($match['away_points'] ?? 0);
 
-    $resultado['home_gf'] = $home_goals;
-    $resultado['home_gc'] = $away_goals;
-    $resultado['away_gf'] = $away_goals;
-    $resultado['away_gc'] = $home_goals;
+    $resultado['home_gf'] = $home_total_points;
+    $resultado['home_gc'] = $away_total_points;
+    $resultado['away_gf'] = $away_total_points;
+    $resultado['away_gc'] = $home_total_points;
 
-    if ($home_goals > $away_goals) {
+    // El que gana más sets gana el partido
+    if ($home_sets > $away_sets) {
         $resultado['home_points'] = 2;
     } else {
         $resultado['away_points'] = 2;
@@ -324,8 +332,8 @@ function calculate_standings($teams, $matches, $deporte = 'futbol') {
         $standings[$aid]['gf'] += $puntos['away_gf'];
         $standings[$aid]['gc'] += $puntos['away_gc'];
         
-        // Para vóley, también guardar sets y puntos totales
-        if ($deporte === 'voley') {
+        // Para vóley y handball, también guardar sets y puntos totales
+        if ($deporte === 'voley' || $deporte === 'handball') {
             $hs = isset($m['home_sets_won']) ? (int)$m['home_sets_won'] : 0;
             $as = isset($m['away_sets_won']) ? (int)$m['away_sets_won'] : 0;
             
@@ -366,8 +374,8 @@ function calculate_standings($teams, $matches, $deporte = 'futbol') {
             }
         }
         
-        // Tarjetas (solo para fútbol y handball)
-        if ($deporte === 'futbol' || $deporte === 'handball') {
+        // Tarjetas (solo para fútbol)
+        if ($deporte === 'futbol') {
             $standings[$hid]['ta'] += isset($m['home_yellow']) ? (int)$m['home_yellow'] : 0;
             $standings[$hid]['tr'] += isset($m['home_red']) ? (int)$m['home_red'] : 0;
             $standings[$aid]['ta'] += isset($m['away_yellow']) ? (int)$m['away_yellow'] : 0;
@@ -384,7 +392,7 @@ function calculate_standings($teams, $matches, $deporte = 'futbol') {
     usort($standings, function($a, $b) use ($deporte) {
         if ($b['pts'] !== $a['pts']) return $b['pts'] - $a['pts'];
         if ($b['dg'] !== $a['dg']) return $b['dg'] - $a['dg'];
-        if ($deporte === 'voley') {
+        if ($deporte === 'voley' || $deporte === 'handball') {
             if ($b['sets_won'] !== $a['sets_won']) return $b['sets_won'] - $a['sets_won'];
         }
         return $b['gf'] - $a['gf'];
@@ -462,12 +470,12 @@ function generate_round_robin($teams, $type = 'todos_contra_todos', $groups = 1,
                 $match["away_yellow"] = 0;
                 $match["away_red"] = 0;
             } elseif ($deporte === 'handball') {
-                $match["home_goals"] = null;
-                $match["away_goals"] = null;
-                $match["home_yellow"] = 0;
-                $match["home_red"] = 0;
-                $match["away_yellow"] = 0;
-                $match["away_red"] = 0;
+                $match["home_sets"] = null;
+                $match["away_sets"] = null;
+                $match["home_points"] = null;
+                $match["away_points"] = null;
+                $match["home_sets_won"] = 0;
+                $match["away_sets_won"] = 0;
             } else { // voley
                 $match["home_sets"] = null;
                 $match["away_sets"] = null;
@@ -549,12 +557,12 @@ function generate_groups_fixture($teams, $groups, $deporte) {
                     $match["away_yellow"] = 0;
                     $match["away_red"] = 0;
                 } elseif ($deporte === 'handball') {
-                    $match["home_goals"] = null;
-                    $match["away_goals"] = null;
-                    $match["home_yellow"] = 0;
-                    $match["home_red"] = 0;
-                    $match["away_yellow"] = 0;
-                    $match["away_red"] = 0;
+                    $match["home_sets"] = null;
+                    $match["away_sets"] = null;
+                    $match["home_points"] = null;
+                    $match["away_points"] = null;
+                    $match["home_sets_won"] = 0;
+                    $match["away_sets_won"] = 0;
                 } else { // voley
                     $match["home_sets"] = null;
                     $match["away_sets"] = null;
@@ -782,8 +790,8 @@ if (isset($_POST['action']) && $_POST['action'] === 'guardar_resultados') {
             $matches[$idx]['walkover_winner'] = null;
             
             // Guardar resultados según deporte
-            if ($current_deporte === 'futbol' || $current_deporte === 'handball') {
-                // GOLES
+            if ($current_deporte === 'futbol') {
+                // FÚTBOL - GOLES
                 $home_goals = isset($_POST['home_goals'][$match_id]) && $_POST['home_goals'][$match_id] !== '' 
                     ? (int)$_POST['home_goals'][$match_id] 
                     : 0;
@@ -801,8 +809,8 @@ if (isset($_POST['action']) && $_POST['action'] === 'guardar_resultados') {
                 $matches[$idx]['away_yellow'] = isset($_POST['away_yellow'][$match_id]) ? (int)$_POST['away_yellow'][$match_id] : 0;
                 $matches[$idx]['away_red'] = isset($_POST['away_red'][$match_id]) ? (int)$_POST['away_red'][$match_id] : 0;
                 
-            } elseif ($current_deporte === 'voley') {
-                // VOLEY - Sets
+            } elseif ($current_deporte === 'voley' || $current_deporte === 'handball') {
+                // VOLEY y HANDBALL - Sets
                 $home_sets = isset($_POST['home_sets'][$match_id]) ? trim($_POST['home_sets'][$match_id]) : null;
                 $away_sets = isset($_POST['away_sets'][$match_id]) ? trim($_POST['away_sets'][$match_id]) : null;
                 
@@ -892,14 +900,21 @@ if (isset($_POST['action']) && $_POST['action'] === 'guardar_horarios') {
 
 // FUNCIÓN AUXILIAR para limpiar campos
 function reset_match_fields(&$match, $deporte) {
-    if ($deporte === 'futbol' || $deporte === 'handball') {
+    if ($deporte === 'futbol') {
         $match['home_goals'] = null;
         $match['away_goals'] = null;
         $match['home_yellow'] = 0;
         $match['home_red'] = 0;
         $match['away_yellow'] = 0;
         $match['away_red'] = 0;
-    } else { // voley
+    } elseif ($deporte === 'voley') {
+        $match['home_sets'] = null;
+        $match['away_sets'] = null;
+        $match['home_points'] = null;
+        $match['away_points'] = null;
+        $match['home_sets_won'] = 0;
+        $match['away_sets_won'] = 0;
+    } elseif ($deporte === 'handball') {
         $match['home_sets'] = null;
         $match['away_sets'] = null;
         $match['home_points'] = null;
@@ -926,14 +941,21 @@ if (isset($_POST['action']) && $_POST['action'] === 'resetear') {
         $matches[$idx]['walkover_winner'] = null;
         
         // Limpiar campos según deporte
-        if ($current_deporte === 'futbol' || $current_deporte === 'handball') {
+        if ($current_deporte === 'futbol') {
             $matches[$idx]['home_goals'] = null;
             $matches[$idx]['away_goals'] = null;
             $matches[$idx]['home_yellow'] = 0;
             $matches[$idx]['home_red'] = 0;
             $matches[$idx]['away_yellow'] = 0;
             $matches[$idx]['away_red'] = 0;
-        } else { // voley
+        } elseif ($current_deporte === 'voley') {
+            $matches[$idx]['home_sets'] = null;
+            $matches[$idx]['away_sets'] = null;
+            $matches[$idx]['home_points'] = null;
+            $matches[$idx]['away_points'] = null;
+            $matches[$idx]['home_sets_won'] = 0;
+            $matches[$idx]['away_sets_won'] = 0;
+        } elseif ($current_deporte === 'handball') {
             $matches[$idx]['home_sets'] = null;
             $matches[$idx]['away_sets'] = null;
             $matches[$idx]['home_points'] = null;
@@ -1501,7 +1523,7 @@ if ($fixture_config['type'] === 'grupos') {
     <div class="login-container fade-in">
         <div class="card login-card">
             <div class="card-header text-center py-4" style="background: linear-gradient(135deg, #0D1B5C 0%, #4C1D95 100%);">
-                <span class="navbar-brand"><?= htmlspecialchars($TORNEO) ?></span>
+                <span class="navbar-brand"> MEET<span style="color: cyan;">X</span></span>
                 <p class="text-white mb-0">Sistema de Gestión Deportiva</p>
             </div>
             <div class="card-body p-4">
@@ -1538,7 +1560,7 @@ if ($fixture_config['type'] === 'grupos') {
     <nav class="navbar navbar-sport">
         <div class="container-fluid">
             <div class="d-flex align-items-center gap-3">
-                <span class="navbar-brand"><?= htmlspecialchars($TORNEO) ?></span>
+                <span class="navbar-brand"> MEET<span style="color: cyan;">X</span></span>
                 <span class="deporte-badge">
                     <?php if ($current_deporte === 'futbol'): ?>
                         <span class="futbol-icon"></span>Beach Futbol
@@ -1690,13 +1712,10 @@ if ($fixture_config['type'] === 'grupos') {
                                             <th width="50" class="text-end">Pts</th>
                                             <th width="40" class="text-end">PJ</th>
                                             <th width="40" class="text-end d-none d-sm-table-cell">PG</th>
-                                            <th width="40" class="text-end d-none d-sm-table-cell">PE</th>
                                             <th width="40" class="text-end d-none d-sm-table-cell">PP</th>
-                                            <th width="50" class="text-end">DG</th>
-                                            <th width="50" class="text-end d-none d-md-table-cell">GF</th>
-                                            <th width="50" class="text-end d-none d-md-table-cell">GC</th>
-                                            <th width="40" class="text-end">🟨</th>
-                                            <th width="40" class="text-end">🟥</th>
+                                            <th width="50" class="text-end">Sets +/-</th>
+                                            <th width="50" class="text-end d-none d-md-table-cell">SG</th>
+                                            <th width="50" class="text-end d-none d-md-table-cell">SP</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1707,15 +1726,12 @@ if ($fixture_config['type'] === 'grupos') {
                                                 <td class="text-end fw-bold text-primary"><?= $r["pts"] ?></td>
                                                 <td class="text-end"><?= $r["pj"] ?></td>
                                                 <td class="text-end d-none d-sm-table-cell"><?= $r["pg"] ?></td>
-                                                <td class="text-end d-none d-sm-table-cell"><?= $r["pe"] ?></td>
                                                 <td class="text-end d-none d-sm-table-cell"><?= $r["pp"] ?></td>
                                                 <td class="text-end fw-semibold <?= $r["dg"] > 0 ? 'text-success' : ($r["dg"] < 0 ? 'text-danger' : '') ?>">
                                                     <?= $r["dg"] > 0 ? '+' : '' ?><?= $r["dg"] ?>
                                                 </td>
-                                                <td class="text-end d-none d-md-table-cell"><?= $r["gf"] ?></td>
-                                                <td class="text-end d-none d-md-table-cell"><?= $r["gc"] ?></td>
-                                                <td class="text-end"><?= $r["ta"] ?></td>
-                                                <td class="text-end"><?= $r["tr"] ?></td>
+                                                <td class="text-end d-none d-md-table-cell"><?= $r["sets_won"] ?></td>
+                                                <td class="text-end d-none d-md-table-cell"><?= $r["sets_lost"] ?></td>
                                             </tr>
                                         <?php endforeach; ?>
                                     </tbody>
@@ -1880,57 +1896,37 @@ if ($fixture_config['type'] === 'grupos') {
                                                             <?php endif; ?>
                                                         
                                                        <?php elseif ($current_deporte === 'handball'): ?>
-    <!-- CAMPOS HANDBALL -->
-    <div class="d-flex justify-content-center align-items-center gap-2 mb-2">
-        <input class="form-control small-input"
-               type="number" min="0"
-               name="home_goals[<?php echo $id; ?>]"
-               value="<?php echo isset($m['home_goals']) && $m['home_goals'] !== null ? (int)$m['home_goals'] : ''; ?>"
-               placeholder="0"
-               data-match-id="<?php echo $id; ?>">
-        
-        <span class="score-display">-</span>
-        
-        <input class="form-control small-input"
-               type="number" min="0"
-               name="away_goals[<?php echo $id; ?>]"
-               value="<?php echo isset($m['away_goals']) && $m['away_goals'] !== null ? (int)$m['away_goals'] : ''; ?>"
-               placeholder="0"
-               data-match-id="<?php echo $id; ?>">
+    <!-- CAMPOS HANDBALL (SISTEMA DE SETS COMO VÓLEY) -->
+    <div class="mb-2">
+        <div class="text-center small text-muted mb-1">Sets (ej: 21,19,15)</div>
+        <div class="d-flex justify-content-center align-items-center gap-2">
+            <input class="form-control text-center"
+                   type="text"
+                   name="home_sets[<?= $id ?>]"
+                   value="<?= htmlspecialchars($m["home_sets"] ?? "") ?>"
+                   placeholder=""
+                   style="width: 120px;"
+                   data-match-id="<?= $id ?>">
+            
+            <span class="score-display">-</span>
+            
+            <input class="form-control text-center"
+                   type="text"
+                   name="away_sets[<?= $id ?>]"
+                   value="<?= htmlspecialchars($m["away_sets"] ?? "") ?>"
+                   placeholder=""
+                   style="width: 120px;"
+                   data-match-id="<?= $id ?>">
+        </div>
     </div>
     
-    <!-- TARJETAS HANDBALL -->
-    <div class="d-flex justify-content-center gap-2 flex-wrap mb-2">
-        <div class="d-flex align-items-center gap-1">
-            <span class="fs-6">🟨</span>
-            <input class="form-control small-input"
-                   type="number" min="0"
-                   name="home_yellow[<?php echo $id; ?>]"
-                   value="<?php echo isset($m['home_yellow']) ? (int)$m['home_yellow'] : 0; ?>"
-                   data-match-id="<?php echo $id; ?>">
-            <span>/</span>
-            <input class="form-control small-input"
-                   type="number" min="0"
-                   name="away_yellow[<?php echo $id; ?>]"
-                   value="<?php echo isset($m['away_yellow']) ? (int)$m['away_yellow'] : 0; ?>"
-                   data-match-id="<?php echo $id; ?>">
-        </div>
-        
-        <div class="d-flex align-items-center gap-1">
-            <span class="fs-6">🟥</span>
-            <input class="form-control small-input"
-                   type="number" min="0"
-                   name="home_red[<?php echo $id; ?>]"
-                   value="<?php echo isset($m['home_red']) ? (int)$m['home_red'] : 0; ?>"
-                   data-match-id="<?php echo $id; ?>">
-            <span>/</span>
-            <input class="form-control small-input"
-                   type="number" min="0"
-                   name="away_red[<?php echo $id; ?>]"
-                   value="<?php echo isset($m['away_red']) ? (int)$m['away_red'] : 0; ?>"
-                   data-match-id="<?php echo $id; ?>">
-        </div>
+    <?php if ($played): ?>
+    <div class="text-center">
+        <small class="text-muted">
+            <strong>Sets:</strong> <?= isset($m["home_sets_won"]) ? (int)$m["home_sets_won"] : 0 ?>-<?= isset($m["away_sets_won"]) ? (int)$m["away_sets_won"] : 0 ?>
+        </small>
     </div>
+    <?php endif; ?>
 
 <?php endif; ?>
 
