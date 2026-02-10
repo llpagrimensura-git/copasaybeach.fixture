@@ -1,94 +1,35 @@
-# 🏖️ COPASAYBEACH
+# 🏆 MEETX - Sistema de Gestión de Deportiva
 
-**COPASAYBEACH** es una aplicación web responsive para la gestión de un torneo de fútbol recreativo, desarrollada con **PHP, HTML, CSS y JSON**.
-
-Permite:
-- Definir equipos desde un archivo JSON
-- Generar automáticamente el fixture (todos contra todos)
-- Cargar goles, tarjetas amarillas y rojas
-- Calcular y mostrar la tabla de posiciones
-- Visualizar los partidos como tarjetas (mobile-first)
-- Compartir los resultados entre distintos dispositivos
+MEETX es un sistema web completo para la gestión y administración de torneos deportivos, compatible con múltiples deportes (fútbol, vóley y handball). Diseñado con una interfaz moderna y responsive, ideal para organizadores de eventos deportivos.
 
 🌐 Demo online:  
-http://copasaybeach.gamer.gd/
+https://copasaybeach.infinityfreeapp.com/
 
----
+## 🎮 Multi-deporte
+- ⚽ Beach Fútbol - Sistema de 3 puntos por victoria
+- 🏐 Beach Vóley - Sistema de sets y 2 puntos por victoria
+- 🤾 Beach Handball - Sistema de sets similar al vóley
 
-## ⚽ Funcionalidades
+## 📊 Gestión Completa
+- ✅ Tabla de posiciones automática con diferentes criterios por deporte
+- 📅 Fixture inteligente (todos contra todos o por grupos)
+- 🎯 Resultados en tiempo real con cálculo automático de puntos
+- 🕐 Calendario de partidos con gestión de fechas y horarios
+- 📱 Diseño responsive que funciona en móviles y escritorio
 
-- 📋 **Equipos configurables** desde `equipos.json`
-- 🔁 **Fixture automático** (round-robin)
-- 🏟️ **Carga de resultados**:
-  - Goles
-  - Tarjetas amarillas 🟨
-  - Tarjetas rojas 🟥
-- 🏆 **Tabla de posiciones** con:
-  - Puntos
-  - PJ, PG, PE, PP
-  - GF, GC, DG
-  - Fair Play (🟨 = 1 punto, 🟥 = 3 puntos)
-- 🎨 **Interfaz responsive** (desktop y mobile)
-- 🌴 **Estética temática “playa”**
-- 📱 **Datos compartidos** entre todos los usuarios (persistencia en servidor)
-
----
-
-## 🧱 Tecnologías utilizadas
-
-- PHP 8.x
-- HTML5
-- CSS3 (Bootstrap 5)
-- JavaScript (mínimo)
-- JSON (persistencia de datos)
-- XAMPP (entorno local)
-- InfinityFree (hosting gratuito)
-
----
+## 👥 Roles de Usuario
+- 👑 Administrador - Control total del sistema
+- 👥 Jugadores/Visitantes - Solo visualización de dato
 
 ## 📁 Estructura del proyecto
 
-mvp-futbol/
-├── index.php
-├── equipos.json
-├── resultados.json
-└── README.md
-
----
-
-## ▶️ Ejecutar el proyecto en local
-
-### 1️⃣ Requisitos
-- Tener instalado **XAMPP**
-- Apache en ejecución
-
-### 2️⃣ Pasos
-1. Copiar el proyecto en: C:\xampp\htdocs\mvp-futbol
-2. Abrir el navegador y entrar a: http://localhost/mvp-futbol
-
----
-
-## 🌐 Publicación en hosting (InfinityFree)
-
-1. Crear un hosting gratuito en https://infinityfree.net
-2. Subir los archivos a la carpeta: /htdocs
-3. Asegurar permisos de escritura en: resultados.json → 666
-4. Acceder desde el dominio asignado
-
-
-## 📝 Configuración de equipos
-
-Los equipos se definen en el archivo `equipos.json`:
-
-[
-{ "id": 1, "nombre": "Equipo #1" },
-{ "id": 2, "nombre": "Equipo #2" },
-{ "id": 3, "nombre": "Equipo #3" }
-]
-
-Luego de modificar este archivo, es necesario volver a generar el fixture.
-
----
+- **index.php** - Página principal de la aplicación
+- **equipos.json** - Base de datos de equipos
+- **resultados.json** - Registro de resultados
+- **usuarios.json** - Usuarios del sistema
+- **fixture_config.json** - Configuración de torneos
+- **deporte_config.json** - Configuración de deportes
+- **README.md** - Este archivo
 
 ## ⚠️ Consideraciones
 
@@ -96,8 +37,6 @@ Los datos se guardan en archivos JSON compartidos
 Si dos usuarios guardan al mismo tiempo, el último guardado sobrescribe
 Ideal para eventos y torneos pequeños
 Para uso intensivo se recomienda migrar a MySQL
-
----
 
 ## 👩‍💻 Autora
 
